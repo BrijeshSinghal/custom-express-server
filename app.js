@@ -4,6 +4,33 @@ const express = require("express");
 const app = express();
 // bring in path
 const path = require("path");
+
+// bring in http and https
+const http = require("http");
+const https = require("https");
+
+// listen on both http & https ports
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(
+	{
+		key: fs.readFileSync(
+			"../../../etc/letsencrypt/live/my_api_url/privkey.pem"
+		),
+		cert: fs.readFileSync(
+			"../../../etc/letsencrypt/live/my_api_url/fullchain.pem"
+		),
+	},
+	app
+);
+
+httpServer.listen(80, () => {
+	console.log("HTTP Server running on port 80");
+});
+
+httpsServer.listen(443, () => {
+	console.log("HTTPS Server running on port 443");
+});
+
 // port
 const PORT = 80;
 app.listen(PORT, () => console.log(`server started on ${PORT}`));
