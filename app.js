@@ -34,8 +34,8 @@ httpsServer.listen(443, () => {
 });
 
 // port
-const PORT = 80;
-app.listen(PORT, () => console.log(`server started on ${PORT}`));
+// const PORT = 80;
+// app.listen(PORT, () => console.log(`server started on ${PORT}`));
 
 // main get
 app.get("/", (req, res) => {
