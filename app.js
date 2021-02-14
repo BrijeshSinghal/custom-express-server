@@ -8,6 +8,8 @@ const path = require("path");
 // bring in http and https
 const http = require("http");
 const https = require("https");
+// bring in fs
+const fs = require("fs");
 
 // listen on both http & https ports
 const httpServer = http.createServer(app);
