@@ -16,10 +16,10 @@ const httpServer = http.createServer(app);
 const httpsServer = https.createServer(
 	{
 		key: fs.readFileSync(
-			"../../../etc/letsencrypt/live/my_api_url/privkey.pem"
+			"../../../etc/letsencrypt/live/brijeshsinghal.com/privkey.pem"
 		),
 		cert: fs.readFileSync(
-			"../../../etc/letsencrypt/live/my_api_url/fullchain.pem"
+			"../../../etc/letsencrypt/live/brijeshsinghal.com/fullchain.pem"
 		),
 	},
 	app
