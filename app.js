@@ -5,9 +5,6 @@ const app = express();
 // bring in path
 const path = require("path");
 
-// bring in fs
-const fs = require("fs");
-
 // port
 const PORT = 80;
 app.listen(PORT, () => console.log(`server started on ${PORT}`));
