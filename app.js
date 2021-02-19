@@ -8,7 +8,7 @@ const path = require("path");
 // bring in fs
 const fs = require("fs");
 
-port;
+// port
 const PORT = 80;
 app.listen(PORT, () => console.log(`server started on ${PORT}`));
 
